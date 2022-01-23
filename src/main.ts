@@ -88,8 +88,6 @@ const outputDiv = document.querySelector<HTMLDivElement>("#output")!;
 		const passEncoder = commandEncoder.beginComputePass();
 		passEncoder.setPipeline(computePipeline);
 		passEncoder.setBindGroup(0, bindGroup);
-
-		console.timeStamp("Starting dispatch");
 		passEncoder.dispatch(input.length);
 		passEncoder.endPass();
 
